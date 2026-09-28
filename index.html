@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="王奕儼 Ian Wang｜技術美術作品集。聚焦程序化 3D、OpenUSD、數位孿生與合成資料流程。">
+  <meta name="theme-color" content="#f5f5f5"><title>Ian Wang — Technical Artist Portfolio</title>
+  <link rel="stylesheet" href="portfolio-home.css?v=20260929-1"><link rel="stylesheet" href="type-scale.css"><script src="portfolio-home.js" defer></script><script src="viewport-preview.js?v=20260928-5" defer></script>
+</head>
+<body class="portfolio-home-page">
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="header" data-header>
+    <a class="identity" href="#top"><i aria-hidden="true"></i><span><b>IAN WANG</b><small>TECHNICAL ARTIST</small></span></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav" data-menu><span class="sr-only">開啟選單</span></button>
+    <nav id="nav" class="nav" aria-label="主要導覽" data-nav><a href="#work">案例</a><a href="#lab">Lab</a><a href="#about">About</a><a class="lang-switch" href="index-en.html" lang="en" hreflang="en" aria-label="Switch to English">EN</a><a class="nav-cta" href="mailto:ian90315@gmail.com">聯絡我</a></nav>
+  </header>
+  <section class="home-banner" id="top" aria-label="首頁作品展示影片">
+    <video autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-label="Ian Wang 技術美術作品精選影片">
+      <source src="assets/video/banner-video-v3.mp4?v=20260929-1" type="video/mp4">
+      您的瀏覽器不支援影片播放。
+    </video>
+    <div class="home-banner-caption" aria-hidden="true"><span>TECHNICAL ART / SHOWREEL</span><span>AUTOPLAY · LOOP</span></div>
+  </section>
+  <main id="main">
+    <section class="hero" id="intro">
+      <p class="eyebrow reveal">王奕儼 / IAN WANG · 技術美術 / TECHNICAL ARTIST</p>
+      <div class="hero-copy reveal">
+        <h1>把工業 3D 資產，<br>變成<span>可參數化、可驗證</span>的內容系統。</h1>
+        <div class="hero-intro"><p>I build procedural 3D tools and validated asset pipelines for digital twin, simulation and synthetic scene generation.</p><p>以 Blender、Geometry Nodes、Python 與 OpenUSD，建立程序化設備、場景組裝與合成資料流程。</p><div class="actions"><a class="button" href="#work">直接看案例 ↓</a><a class="text-link" href="mailto:ian90315@gmail.com">ian90315@gmail.com ↗</a></div></div>
+      </div>
+      <dl class="hero-facts reveal"><div><dt>10+ 年</dt><dd>3D 學習與實作</dd></div><div><dt>3+ 年</dt><dd>工作經驗</dd></div><div><dt>03</dt><dd>可驗證專案系統</dd></div><div><dt>Primary</dt><dd>AI Factory / Digital Twin</dd></div></dl>
+    </section>
+    <section class="work section" id="work">
+      <div class="section-head reveal"><p class="section-tag">SELECTED WORK</p><h2>三個案例，回答三種工作問題</h2><p>主案例對應 AI 工廠；另外兩項呈現可轉用於智慧製造與智慧城市的資產管線能力。</p></div>
+      <div class="projects-showcase">
+        <div class="project-list">
+          <a class="project is-active reveal" data-project-index="0" href="omni-mini-factory.html"><span class="project-no">01</span><div class="project-copy"><p>AI FACTORY · OPENUSD · SYNTHETIC DATA</p><h3>Omni Mini Factory</h3><p>程序化輸送帶、幾何瑕疵、OpenUSD 場景、50 組 RGB／JSON 與自動驗證。</p><strong>完整案例 ↗</strong></div><img class="project-mobile-image preserve-ratio" src="assets/captures/variant_comparison_vertical.png" alt="Clean 在上、MissingPart 在下的 Omni Mini Factory 比較"></a>
+          <a class="project reveal" data-project-index="1" href="cad-asset-toolkit.html"><span class="project-no">02</span><div class="project-copy"><p>BLENDER PYTHON · LOD · PBR · USD</p><h3>CAD Asset Toolkit</h3><p>工程測試網格的減面、三層 LOD、PBR／ORM 與可搬移 USD 資產流程。</p><strong>案例摘要 ↗</strong></div><img class="project-mobile-image focus-cad" src="assets/cad/pbr-pipeline.png" alt="CAD Asset Toolkit 的 PBR 與 ORM 操作介面" loading="lazy"></a>
+          <a class="project reveal" data-project-index="2" href="procedural-road.html"><span class="project-no">03</span><div class="project-copy"><p>GEOMETRY NODES · ADD-ON · SDG</p><h3>Procedural Road</h3><p>1–8 車道、1–50 車輛實例與可重現場景變化的 Blender 工具。</p><strong>案例摘要 ↗</strong></div><img class="project-mobile-image" src="assets/pis/road-sdg-preview.png" alt="多車輛程序化道路場景預覽" loading="lazy"></a>
+        </div>
+        <div class="project-stage reveal">
+          <a class="project-visual is-active" data-project-visual="0" href="omni-mini-factory.html"><img class="preserve-ratio" src="assets/captures/variant_comparison_vertical.png" alt="Clean 在上、MissingPart 在下的 Omni Mini Factory 比較"><span class="visual-label">01 / OMNI MINI FACTORY</span><i class="visual-mask"></i></a>
+          <a class="project-visual" data-project-visual="1" href="cad-asset-toolkit.html"><img class="focus-cad" src="assets/cad/pbr-pipeline.png" alt="CAD Asset Toolkit 的 PBR 與 ORM 操作介面"><span class="visual-label">02 / CAD ASSET TOOLKIT</span><i class="visual-mask"></i></a>
+          <a class="project-visual" data-project-visual="2" href="procedural-road.html"><img src="assets/pis/road-sdg-preview.png" alt="多車輛程序化道路場景預覽"><span class="visual-label">03 / PROCEDURAL ROAD</span><i class="visual-mask"></i></a>
+        </div>
+      </div>
+    </section>
+    <section class="lab-teaser section" id="lab">
+      <div class="section-head reveal"><p class="section-tag">VISUAL LAB</p><h2>比例、材質、燈光與構圖的視覺練習</h2><p>六件跨 SketchUp、Creo、NX、Rhino、C4D、Blender 與 KeyShot／V-Ray 的設計與渲染作品，補充技術管線之外的藝術基礎。</p></div>
+      <a class="lab-teaser-link reveal" href="visual-lab.html" aria-label="開啟完整 Visual Lab">
+        <span class="lab-teaser-copy"><b>2017—2023</b><strong>VISUAL DEVELOPMENT<br>AND RENDER STUDIES</strong><i>查看 6 件作品 ↗</i></span>
+        <span class="lab-teaser-images"><img src="assets/lab/interior-render-2017.jpg" alt="2017 室內空間渲染"><img src="assets/lab/spo2-design-2019.jpg" alt="2019 血氧機產品渲染"><img src="assets/lab/scene-render-2023.png" alt="2023 場景氛圍渲染"></span>
+      </a>
+    </section>
+    <section class="about section" id="about">
+      <div class="about-lead reveal"><p class="section-tag">ABOUT / EXPERIENCE</p><h2>王奕儼<br><span>Ian Wang</span></h2><p>技術美術／Technical Artist。具 10+ 年 3D 學習與實作經驗，工作年資 3+ 年；工作方式重視可調參數、可重現結果、清楚限制與完整交付。</p><a class="button" href="mailto:ian90315@gmail.com">ian90315@gmail.com ↗</a></div>
+      <div class="timeline reveal"><article><span>2021/04—2022/05</span><h3>助理設計工程師</h3><p>民盛應用企業股份有限公司<br>育樂用品製造業</p></article><article><span>2018/09—2019/09</span><h3>工業設計師</h3><p>泰博科技股份有限公司<br>醫療器材製造業</p></article><article><span>3+ 年</span><h3>設計接案</h3><p>產品設計開發、室內設計規劃、平面設計</p></article></div>
+    </section>
+  </main>
+  <footer><p><b>IAN WANG — TECHNICAL ARTIST</b><br>Digital Twin · Procedural 3D · Synthetic Data</p><a href="mailto:ian90315@gmail.com">ian90315@gmail.com</a><a class="page-top-link" href="#top" aria-label="回到頁首">PAGE TOP ↑</a></footer>
+</body></html>

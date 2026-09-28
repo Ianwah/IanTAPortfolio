@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "omni-mini-factory-workpiece-label.schema.json",
+  "title": "Omni Mini Factory Workpiece Defect Label",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "frame_index",
+    "image",
+    "class_id",
+    "defect_state",
+    "frame_seed",
+    "defect_seed",
+    "scratch",
+    "workpiece",
+    "camera",
+    "lighting",
+    "render"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "frame_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "image": {
+      "type": "string",
+      "pattern": "^rgb/frame_[0-9]{4}\\.png$"
+    },
+    "class_id": {
+      "type": "integer",
+      "enum": [0, 1, 2]
+    },
+    "defect_state": {
+      "type": "string",
+      "enum": ["Clean", "Scratch", "MissingPart"]
+    },
+    "frame_seed": {
+      "type": "integer"
+    },
+    "defect_seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9999
+    },
+    "scratch": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["length_m", "width_m", "depth_m"],
+          "properties": {
+            "length_m": {"type": "number", "minimum": 0.06, "maximum": 0.18},
+            "width_m": {"type": "number", "minimum": 0.002, "maximum": 0.008},
+            "depth_m": {"type": "number", "minimum": 0.0005, "maximum": 0.002}
+          }
+        }
+      ]
+    },
+    "workpiece": {
+      "$ref": "#/$defs/transform"
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "position_m", "rotation_euler_deg"],
+      "properties": {
+        "name": {"type": "string"},
+        "position_m": {"$ref": "#/$defs/vector3"},
+        "rotation_euler_deg": {"$ref": "#/$defs/vector3"}
+      }
+    },
+    "lighting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key_energy", "fill_energy"],
+      "properties": {
+        "key_energy": {"type": "number", "exclusiveMinimum": 0},
+        "fill_energy": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine", "resolution"],
+      "properties": {
+        "engine": {"const": "BLENDER_EEVEE_NEXT"},
+        "resolution": {
+          "type": "array",
+          "prefixItems": [
+            {"const": 640},
+            {"const": 480}
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    }
+  },
+  "$defs": {
+    "vector3": {
+      "type": "array",
+      "items": {"type": "number"},
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["position_m", "rotation_euler_deg"],
+      "properties": {
+        "position_m": {"$ref": "#/$defs/vector3"},
+        "rotation_euler_deg": {"$ref": "#/$defs/vector3"}
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A procedural industrial inspection and synthetic-data pipeline built with Blender Geometry Nodes, OpenUSD, Omniverse and Python.">
+  <meta name="theme-color" content="#f5f5f5">
+  <title>Omni Mini Factory — Procedural Inspection Pipeline</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="umber-theme.css">
+  <link rel="stylesheet" href="type-scale.css">
+  <script src="script.js" defer></script>
+  <script src="viewport-preview.js?v=20260928-5" defer></script>
+</head>
+<body class="omni-case-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Back to page top">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>OMNI MINI FACTORY</strong><small>TECHNICAL ART CASE STUDY</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="sr-only">Open menu</span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
+      <a class="portfolio-home-link" href="index-en.html">Portfolio Home</a>
+      <div class="case-section-nav" aria-label="Case reading progress">
+        <a href="#pipeline" data-section-nav="pipeline">Pipeline</a><a href="#procedural" data-section-nav="procedural">Procedural Asset</a><a href="#dataset" data-section-nav="dataset">Dataset</a><a href="#validation" data-section-nav="validation">Validation</a>
+      </div>
+      <a class="lang-switch" href="omni-mini-factory.html" lang="zh-Hant" hreflang="zh-Hant">中</a>
+      <a class="nav-cta" href="#downloads">Appendix</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> VERIFIED END-TO-END PIPELINE</p>
+        <h1 id="hero-title">From procedural assets<br>to <span>validated synthetic data</span></h1>
+        <p class="hero-lede">A configurable conveyor and reproducible workpiece defects built in Blender Geometry Nodes, assembled through OpenUSD and Omniverse, then captured and automatically validated as paired RGB/JSON data with Python.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#pipeline">View full pipeline <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="#dataset">Explore dataset</a>
+        </div>
+        <ul class="tool-list" aria-label="Tools used"><li>Blender 4.5 LTS</li><li>Geometry Nodes</li><li>OpenUSD</li><li>Omniverse Kit</li><li>Python</li></ul>
+      </div>
+      <div class="hero-media reveal">
+        <div class="media-topline"><span>GEOMETRY NODES / LENGTH DEMO</span><span>1 m · 3 m · 6 m</span></div>
+        <video controls muted playsinline preload="metadata" aria-label="Geometry Nodes conveyor length demonstration">
+          <source src="assets/video/gn_length_demo.mp4?v=20260928-3" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <div class="media-caption"><span class="live-dot"></span><span>Geometry Nodes → OpenUSD → Synthetic Data</span><span>H.264 · No audio</span></div>
+      </div>
+    </section>
+
+    <section class="metrics-strip" aria-label="Project outcome summary">
+      <div class="metric"><strong>03</strong><span>DEFECT TYPES</span></div>
+      <div class="metric"><strong>50</strong><span>RGB IMAGES</span></div>
+      <div class="metric"><strong>50</strong><span>JSON LABELS</span></div>
+      <div class="metric"><strong>49</strong><span>UNIQUE SEEDS</span></div>
+      <div class="metric metric-pass"><strong>PASS</strong><span>0 ISSUES</span></div>
+    </section>
+
+    <section class="section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="section-heading reveal"><div><p class="section-index">01 / PIPELINE</p><h2 id="pipeline-title">A complete, reproducible technical pipeline</h2></div><p>Every stage—from asset construction to dataset validation—has traceable inputs, outputs and verification criteria.</p></div>
+      <div class="pipeline-tabs reveal" role="tablist" aria-label="Pipeline stages">
+        <button class="pipeline-tab is-active" type="button" role="tab" aria-selected="true" data-pipeline="0"><b>01</b><span>Blender<small>Procedural assets</small></span></button>
+        <button class="pipeline-tab" type="button" role="tab" aria-selected="false" data-pipeline="1"><b>02</b><span>OpenUSD<small>References & variants</small></span></button>
+        <button class="pipeline-tab" type="button" role="tab" aria-selected="false" data-pipeline="2"><b>03</b><span>Omniverse<small>Scene validation</small></span></button>
+        <button class="pipeline-tab" type="button" role="tab" aria-selected="false" data-pipeline="3"><b>04</b><span>Python<small>Randomized capture</small></span></button>
+        <button class="pipeline-tab" type="button" role="tab" aria-selected="false" data-pipeline="4"><b>05</b><span>Dataset<small>Output & QA</small></span></button>
+      </div>
+      <div class="pipeline-detail reveal" data-pipeline-detail>
+        <div><span class="detail-label">STEP 01</span><h3>Procedural assets and defect tools</h3><p>Conveyor dimensions and repeating structures are exposed as parameters, while one Geometry Nodes modifier manages Clean, Scratch and MissingPart states.</p></div>
+        <ul><li>Modular Geometry Nodes structure</li><li>Seeded defect parameters</li><li>True Boolean Difference grooves</li></ul>
+      </div>
+      <button class="image-frame wide reveal" type="button" data-lightbox="assets/captures/pipeline_architecture_grayscale_cream.png" aria-label="Enlarge the complete pipeline architecture"><img src="assets/captures/pipeline_architecture_grayscale_cream.png" alt="Five-stage grayscale pipeline architecture from Blender and OpenUSD through Omniverse and Python to the dataset" loading="lazy"><span class="zoom-hint">ENLARGE ↗</span></button>
+    </section>
+
+    <section class="section alt-section" id="procedural" aria-labelledby="procedural-title">
+      <div class="section-heading reveal"><div><p class="section-index">02 / PROCEDURAL ASSET</p><h2 id="procedural-title">One node system, an extensible production line</h2></div><p>Length, width and repeating structures are managed centrally. Changing Length updates the belt, rails, rollers and support legs together.</p></div>
+      <div class="feature-grid">
+        <button class="image-frame feature-visual reveal" type="button" data-lightbox="assets/captures/gn_length_comparison_vertical.svg?v=20260928-2" aria-label="Enlarge the vertical comparison of 1, 3 and 6 meter conveyors"><img src="assets/captures/gn_length_comparison_vertical.svg?v=20260928-2" alt="One Geometry Nodes setup generating 1, 3 and 6 meter conveyors in a vertical comparison" loading="eager"><span class="zoom-hint">1 m / 3 m / 6 m ↗</span></button>
+        <div class="feature-copy reveal">
+          <p class="mono-label">GN_CONVEYOR_MASTER</p><h3>A maintainable modular node tree</h3><p>The graph is organized into seven blocks: Belt, Frame, Procedural Rollers, Support Legs, Guide Rails, Inspection Zone and Assembly / Output.</p>
+          <div class="spec-list"><div><span>Length presets</span><b>1 / 3 / 6 m</b></div><div><span>Roller distribution</span><b>Mesh Line + Instances</b></div><div><span>Coordinate system</span><b>Z-up · meters</b></div></div>
+          <button class="text-link" type="button" data-lightbox="assets/captures/gn_node_overview.png">View full node architecture <span>↗</span></button>
+        </div>
+      </div>
+      <div class="detail-cards reveal">
+        <button class="detail-card" type="button" data-lightbox="assets/captures/gn_procedural_rollers.png"><span>01</span><strong>Procedural Rollers</strong><small>Automatically calculates instance count from usable length and spacing</small></button>
+        <button class="detail-card" type="button" data-lightbox="assets/captures/gn_support_legs.png"><span>02</span><strong>Support Legs</strong><small>Synchronizes modules, left/right placement and support beams</small></button>
+        <button class="detail-card" type="button" data-lightbox="assets/captures/gn_node_overview.png"><span>03</span><strong>Assembly / Output</strong><small>Seven separated blocks for easier maintenance and debugging</small></button>
+      </div>
+    </section>
+
+    <section class="section" id="usd" aria-labelledby="usd-title">
+      <div class="section-heading reveal"><div><p class="section-index">03 / OPENUSD ASSEMBLY</p><h2 id="usd-title">Non-destructive scene assembly</h2></div><p>Equipment, products, sensors and lights remain independent assets. The master stage assembles them through References while preserving placement, Variants and review-lighting overrides.</p></div>
+      <div class="comparison-card reveal">
+        <div class="comparison-header"><span><i class="clean-dot"></i> CLEAN · 4 FASTENERS</span><span><i class="missing-dot"></i> MISSINGPART · 3 FASTENERS</span></div>
+        <button class="image-frame" type="button" data-lightbox="assets/captures/variant_comparison.png" aria-label="Enlarge the Clean and MissingPart comparison"><img src="assets/captures/variant_comparison.png" alt="Clean with four fasteners and MissingPart with three fasteners from the same camera view" loading="lazy"></button>
+        <p>The <code>defectState</code> USD Variant currently contains <strong>Clean</strong> and <strong>MissingPart</strong>; Scratch is generated in Blender Geometry Nodes.</p>
+      </div>
+      <div class="evidence-grid reveal">
+        <button class="evidence-card" type="button" data-lightbox="assets/captures/usd_stage_hierarchy.png"><span class="card-kicker">STAGE EVIDENCE</span><strong>Semantic Prim hierarchy</strong><small>/World / Equipment / Products / Sensors / Lights</small><span class="card-arrow">↗</span></button>
+        <button class="evidence-card" type="button" data-lightbox="assets/captures/usd_variant_defectState.png"><span class="card-kicker">VARIANT EVIDENCE</span><strong>defectState switching</strong><small>Clean / MissingPart · Same scene and framing</small><span class="card-arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="defects" aria-labelledby="defects-title">
+      <div class="section-heading reveal"><div><p class="section-index">04 / SEEDED DEFECTS</p><h2 id="defects-title">Controllable, reproducible geometric defects</h2></div><p>A fixed seed reproduces the same evaluated geometry; seeds 0–9 were batch-validated at fixed dimensions.</p></div>
+      <div class="defect-layout">
+        <button class="image-frame reveal" type="button" data-lightbox="assets/captures/defect_seed_comparison.png" aria-label="Enlarge the Scratch seed 0 through 9 comparison"><img src="assets/captures/defect_seed_comparison.png" alt="Position and angle variation of procedural Scratch defects across seeds 0 through 9" loading="lazy"><span class="zoom-hint">SEED 00—09 ↗</span></button>
+        <div class="defect-panel reveal">
+          <div class="defect-states" aria-label="Defect types"><span><b>0</b>Clean</span><span class="active"><b>1</b>Scratch</span><span><b>2</b>MissingPart</span></div>
+          <h3>Boolean Difference, not a material illusion</h3><p>Scratch is a true groove cut into the workpiece surface. A safe-region constraint keeps it clear of the four corner holes and center slots. Each Scratch frame currently generates one groove.</p>
+          <div class="parameter-grid"><div><span>Length</span><strong>0.066692—0.169876 m</strong></div><div><span>Width</span><strong>0.002042—0.007922 m</strong></div><div><span>Depth</span><strong>0.000841—0.001989 m</strong></div><div><span>Unique seeds</span><strong>49 / 50</strong></div></div>
+          <button class="text-link" type="button" data-lightbox="assets/captures/defect_generator_parameters.png">View exposed parameters and nodes <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dataset" aria-labelledby="dataset-title">
+      <div class="section-heading reveal"><div><p class="section-index">05 / SYNTHETIC DATASET</p><h2 id="dataset-title">50 paired samples, each one traceable</h2></div><p>A fixed master seed controls defects, workpiece pose, camera jitter and light intensity, producing RGB PNG files with matching JSON labels.</p></div>
+      <div class="dataset-grid">
+        <button class="image-frame dataset-sheet reveal" type="button" data-lightbox="assets/dataset/dataset_contact_sheet.png" aria-label="Enlarge the 4 by 4 dataset sample grid"><img src="assets/dataset/dataset_contact_sheet.png" alt="A 4 by 4 synthetic-data sample grid containing Clean, Scratch and MissingPart states" loading="lazy"><span class="zoom-hint">4 × 4 SAMPLE GRID ↗</span></button>
+        <aside class="dataset-panel reveal">
+          <p class="mono-label">CLASS DISTRIBUTION</p>
+          <div class="bar-row"><div><span>Scratch</span><b>25 · 50%</b></div><div class="bar"><i style="--value:50%;--bar:#333"></i></div></div>
+          <div class="bar-row"><div><span>Clean</span><b>15 · 30%</b></div><div class="bar"><i style="--value:30%;--bar:#777"></i></div></div>
+          <div class="bar-row"><div><span>MissingPart</span><b>10 · 20%</b></div><div class="bar"><i style="--value:20%;--bar:#aaa"></i></div></div>
+          <div class="dataset-specs"><div><strong>640 × 480</strong><span>RGB PNG</span></div><div><strong>EEVEE NEXT</strong><span>Render engine</span></div><div><strong>20260926</strong><span>Master seed</span></div><div><strong>PAIRED</strong><span>50 PNG + 50 JSON</span></div></div>
+          <div class="randomized"><span>RANDOMIZED</span><ul><li>Defect type & dimensions</li><li>Workpiece position & rotation</li><li>Camera position & rotation jitter</li><li>Key / Fill light intensity</li></ul></div>
+        </aside>
+      </div>
+      <div class="scope-note reveal"><span>DATASET SCOPE</span><p>This is a portfolio-scale pipeline-validation dataset rather than a production-scale corpus. It currently excludes segmentation masks, depth, normals, bounding boxes and train/validation/test splits.</p></div>
+    </section>
+
+    <section class="section validation-section" id="validation" aria-labelledby="validation-title">
+      <div class="validation-lead reveal"><p class="section-index">06 / VALIDATION</p><div class="pass-seal"><span>PASS</span><small>0 ISSUES</small></div><h2 id="validation-title">Not merely visually correct—<br>automatically validated.</h2><p>The dataset, video and release package all pass validation. Re-running the same frame seed produces identical decoded pixels and JSON.</p></div>
+      <div class="checklist reveal">
+        <div><span>01</span><p><strong>Count and pairing</strong>50 PNG + 50 JSON with one-to-one filenames</p><i>✓</i></div>
+        <div><span>02</span><p><strong>Class distribution</strong>Clean 15 / Scratch 25 / MissingPart 10</p><i>✓</i></div>
+        <div><span>03</span><p><strong>Parameter bounds</strong>Defects, workpieces, cameras and lights remain within configured ranges</p><i>✓</i></div>
+        <div><span>04</span><p><strong>Reproducibility</strong>Same seed → same decoded pixels + JSON</p><i>✓</i></div>
+        <div><span>05</span><p><strong>Release QA</strong>Excludes .blend files, the full dataset and absolute local paths</p><i>✓</i></div>
+      </div>
+    </section>
+
+    <section class="section" id="challenges" aria-labelledby="challenges-title">
+      <div class="section-heading reveal"><div><p class="section-index">07 / TECHNICAL DECISIONS</p><h2 id="challenges-title">Key technical decisions</h2></div><p>Each decision makes the assets more controllable, the scene more maintainable and the resulting data more trustworthy.</p></div>
+      <div class="challenge-grid reveal">
+        <article><span>01</span><h3>Scratch safe region</h3><p>The generation area avoids holes and center slots; evaluated bounds for seeds 0–9 remain within the workpiece.</p></article>
+        <article><span>02</span><h3>True geometric grooves</h3><p>Boolean Difference creates real geometry rather than a bump-only illusion, preserving silhouette and occlusion.</p></article>
+        <article><span>03</span><h3>Reference / Variant</h3><p>Assets stay independent and are assembled non-destructively in the master stage; the missing-part state changes only one variable.</p></article>
+        <article><span>04</span><h3>Dedicated capture scene</h3><p>Capture does not reuse the modeling viewport; a fixed master seed controls EEVEE batch output and reproducibility.</p></article>
+      </div>
+    </section>
+
+    <section class="section appendix-section" id="downloads" aria-labelledby="download-title">
+      <div class="appendix-copy reveal"><p class="section-index">08 / TECHNICAL APPENDIX</p><h2 id="download-title">Need more technical detail?</h2><p>The core outcomes and validation evidence are documented on this page. A more detailed English technical appendix is available on request.</p></div>
+      <a class="button ghost reveal" href="mailto:ian90315@gmail.com?subject=Omni%20Mini%20Factory%20Technical%20Appendix">Request appendix <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><p><strong>OMNI MINI FACTORY</strong><br>Procedural Inspection Pipeline</p></div><a href="mailto:ian90315@gmail.com">ian90315@gmail.com ↗</a><a class="page-top-link" href="#top" aria-label="Back to page top">PAGE TOP ↑</a></footer>
+
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Enlarged image view"><button type="button" class="lightbox-close" data-lightbox-close aria-label="Close image">×</button><img src="" alt=""><p></p></dialog>
+</body>
+</html>

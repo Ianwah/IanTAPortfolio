@@ -1,0 +1,30 @@
+/* Shared type scale derived from the rendered Umber reference site. */
+.case-brief-page{font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.6}
+.case-brief-page .top{font-size:13px;font-weight:400;letter-spacing:.1em}
+.case-brief-page .eyebrow{font-size:11px;font-weight:300;letter-spacing:.2em}
+.case-brief-page .hero h1{font-size:clamp(28px,2.7vw,36px);font-weight:300;letter-spacing:.08em;line-height:1.4}
+.case-brief-page .lead{font-size:16px;letter-spacing:.08em;line-height:1.85}
+.case-brief-page .facts dt{font-size:18px;font-weight:400;letter-spacing:.06em}
+.case-brief-page .facts dd{font-size:12px;letter-spacing:.08em;line-height:1.6}
+.case-brief-page .content h2{font-size:clamp(23px,2vw,28px);font-weight:300;letter-spacing:.1em;line-height:1.55}
+.case-brief-page .content h3{font-size:20px;font-weight:300;letter-spacing:.08em}
+.case-brief-page .content p{font-size:16px;letter-spacing:.08em;line-height:1.8}
+.case-brief-page .scope b,.case-brief-page .next{font-size:13px;font-weight:400;letter-spacing:.08em}
+.case-brief-page footer{font-size:11px;letter-spacing:.1em}
+
+.omni-case-page{font-size:16px;font-weight:300;letter-spacing:.06em;line-height:1.6}
+.omni-case-page .site-nav{font-size:13px;letter-spacing:.08em}
+.omni-case-page .eyebrow,.omni-case-page .section-index,.omni-case-page .mono-label{font-size:10.5px;font-weight:300;letter-spacing:.2em}
+.omni-case-page .hero h1{font-size:clamp(28px,2.7vw,36px);font-weight:300;letter-spacing:.08em;line-height:1.4}
+.omni-case-page .hero-lede{font-size:16px;letter-spacing:.08em;line-height:1.85}
+.omni-case-page .metric strong{font-size:18px;font-weight:400}.omni-case-page .metric span{font-size:10.5px;letter-spacing:.14em}
+.omni-case-page .section-heading h2,.omni-case-page .validation-lead h2,.omni-case-page .download-copy h2{font-size:clamp(23px,2vw,28px);font-weight:300;letter-spacing:.1em;line-height:1.55}
+.omni-case-page .section-heading>p,.omni-case-page .validation-lead>p:last-child,.omni-case-page .download-copy>p{font-size:16px;letter-spacing:.08em;line-height:1.8}
+.omni-case-page .pipeline-detail h3,.omni-case-page .feature-copy h3,.omni-case-page .defect-panel h3{font-size:20px;font-weight:300;letter-spacing:.08em}
+.omni-case-page .pipeline-detail p,.omni-case-page .pipeline-detail ul,.omni-case-page .feature-copy>p,.omni-case-page .defect-panel>p,.omni-case-page .challenge-grid p{font-size:16px;letter-spacing:.06em;line-height:1.75}
+.omni-case-page .detail-card strong,.omni-case-page .evidence-card strong,.omni-case-page .challenge-grid h3{font-size:18px;font-weight:300;letter-spacing:.06em}
+@media(max-width:700px){.case-brief-page,.omni-case-page{font-size:14px}.case-brief-page .hero h1,.omni-case-page .hero h1{font-size:24px}.case-brief-page .lead,.case-brief-page .content p,.omni-case-page .hero-lede,.omni-case-page .section-heading>p,.omni-case-page .validation-lead>p:last-child,.omni-case-page .download-copy>p,.omni-case-page .pipeline-detail p,.omni-case-page .pipeline-detail ul,.omni-case-page .feature-copy>p,.omni-case-page .defect-panel>p,.omni-case-page .challenge-grid p{font-size:14px}.case-brief-page .content h2,.omni-case-page .section-heading h2,.omni-case-page .validation-lead h2,.omni-case-page .download-copy h2{font-size:22px}}
+/* Editorial review marker. Remove the class after temporary copy is finalized. */
+.review-temp{color:#c62828!important;font:inherit;letter-spacing:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:.22em}
+.timeline .review-temp{font:inherit;letter-spacing:inherit}
+.review-temp::before{content:"[" attr(data-review-label) "] ";font-size:.78em;font-weight:600;letter-spacing:.08em;text-decoration:none}
