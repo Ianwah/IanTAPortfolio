@@ -18,11 +18,3 @@ node portfolio-site/preview-server.mjs
 
 > 不建議直接以 `file://` 開啟；透過 HTTP 預覽可確保影片與下載連結行為一致。
 
-## 內容原則
-
-- 最終影片使用 42 秒 `procedural_inspection_pipeline_v1.mp4`。
-- USD `defectState` 僅宣稱 Clean / MissingPart；Scratch 明確標示為 Blender Geometry Nodes。
-- 資料集只宣稱已存在的 RGB PNG 與 JSON label。
-- 姓名、職稱、年資、公開經歷與 Email 只使用本人本輪提供的內容；履歷 PDF、GitHub 與 LinkedIn 尚未提供，因此不建立連結。
-- CAD 案例明示為合成工程測試網格，不宣稱真實客戶 CAD 經驗。
-- PIS Road 目前只宣稱場景變體與 metadata，不宣稱 segmentation、depth 或 bbox 標註。
